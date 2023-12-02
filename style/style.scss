@@ -1,0 +1,172 @@
+$contianer:32px 108px;
+$subTextColor:#717171;
+$textColor:#fff;
+@mixin flex($justify,$alignItems,$direction){
+    display: flex;
+    justify-content:$justify ;
+    align-items: $alignItems;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+@mixin livePaje{
+    color: #417F56;
+    font-weight: 700;
+    font-family: E-regular;
+    border-bottom: $subTextColor solid 1px;
+    padding: 2px;
+}
+@mixin about-item{
+    position: relative;
+    z-index: 4;
+}
+
+main{
+    direction: rtl;
+    .hero{
+        @include flex(space-evenly,center,column );
+        header{
+            nav{
+                @include flex(space-around,center,row);
+                padding: $contianer;
+                .center-part{
+                    ul{
+                        @include flex(space-evenly,center,row);
+                        width: 808px;
+                        height: 33px;
+                        .live{
+                            @include livePaje;
+                        }
+                        li{
+                            gap: 4px;
+                            a{
+                                @include flex(center,center,row);
+                                font-family: E-regular;
+                                color: $subTextColor;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .left-part{
+                    svg:nthchild(1){
+                        border-radius: 4px;
+                        background: var(--green-green-tint-1, #E5F2E9);
+                    }
+                }    
+            }
+            .slider{
+                width: 100%;
+            }
+        }
+        h2{
+            font-family: E-regular;
+            font-weight: 700;
+            margin-top: 37px;
+        }
+        .meno-contianer{
+            @include flex(space-around,center ,row);
+            width: 100%;
+            margin-top: 150px;
+            padding: $contianer;
+            .meno{
+                height: 160px;
+                width: 287px;
+                gap: 18px;
+                border-radius: 8px;
+                border: 1px solid var(--green-primary, #417F56);
+                background: var(--green-primary, #417F56);
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0.00);
+                img{
+                    position: relative;
+                    bottom: 130px;
+                    left: -9px ;
+                }
+                .drink{
+                    position: relative;
+                    bottom: 200px;
+                }
+                button{
+                    width: 145px;
+                    height: 48px;
+                    padding: 8px 16px;
+                    font-size: 20px;
+                    font-family: E-regular;
+                    font-weight: 400;
+                    color: #353535;
+                    border: none;
+                    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0.00);
+                    border-radius: 4px;
+                    background: var(--neutral-e-1-e-1-e-1, #F9F9F9);
+                    position: relative;
+                    bottom: 130px;
+                    right: 60px;
+                }
+                .drink--button{
+                    position: relative;
+                    bottom: 180px;
+                }
+            }
+        }
+
+    }
+    .content{
+        @include flex(center,center ,column );
+        .aboutContianer{
+            width: 100%;
+            height: 390px;
+            @include flex(center,center ,column);
+            margin-top: 80px;
+            background-color: #000000A6;
+            overflow: hidden;
+            img{
+                width: 1440px;
+                position: relative;
+                top: -90px;
+                z-index: -1;
+            }
+            .aboutContianer__rightPart{
+                width: 600px;
+                height: 238px;
+                font-family: E-regular;
+                position: relative;
+                bottom: 200px;
+                right: 108px;
+                z-index: 2;
+
+                h2{
+                    @include about-item;
+                    color: $textColor;
+                    font-weight: 700;
+
+                }
+                p{
+                    color: $textColor;
+                    font-weight: 400;
+                }
+                button{
+                    color: $textColor;
+                    background-color: #ffffff00;
+                }
+            }
+        }
+        //I cant make aboutContianer helpp me.
+        .cards-main-titel{
+            font-family: E-bold;
+            font-weight: 700;
+            margin-top: 80px;
+            color: #353535;
+        }
+        .cardCotianer{
+            width: 100%;
+            @include flex(space-evenly,center ,row );
+            .cardCotianer__cards{
+                width: 288px;
+                height: 344px;
+                margin-top: 50px;
+                border-radius: 8px;
+                border: 1px solid var(--neutral-cbcbcb, #CBCBCB);
+                background: var(--neutral-white, #FFF);
+            }
+        }
+    }
+}
