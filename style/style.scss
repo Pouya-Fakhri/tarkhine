@@ -55,7 +55,30 @@ main{
                 }    
             }
             .slider{
-                width: 100%;
+                width: 100vw;
+                height: 336px;
+                @include flex(center,center,column );
+                gap: 40px;
+                background-image: url(../image/Slider.png);
+                h1{
+                    font-family: E-extrabold;
+                    color: $textColor;
+                    line-height: 140%;
+                    font-size: 40px;
+                }
+                button{
+                    width: 184px;
+                    height: 40px;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    border: none;
+                    background:#417F56;
+                    color: #FFF;
+                    font-family: E-semibold;
+                    font-weight: 500;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
             }
         }
         h2{
@@ -112,44 +135,58 @@ main{
     .content{
         @include flex(center,center ,column );
         .aboutContianer{
-            width: 100%;
+            width: 100vw;
             height: 390px;
-            @include flex(center,center ,column);
+            @include flex(space-around,center ,row);
             margin-top: 80px;
-            background-color: #000000A6;
-            overflow: hidden;
-            img{
-                width: 1440px;
-                position: relative;
-                top: -90px;
-                z-index: -1;
-            }
-            .aboutContianer__rightPart{
-                width: 600px;
-                height: 238px;
-                font-family: E-regular;
-                position: relative;
-                bottom: 200px;
-                right: 108px;
-                z-index: 2;
-
+            padding: 48px 7.5%;
+            
+            color: #fff;
+            background-image: url(../image/about.png);
+            .aboutContianer__rightPaet{
+                width: 570px;
+                height: 294px;
+                @include flex(space-evenly,flex-start,column );
                 h2{
-                    @include about-item;
-                    color: $textColor;
-                    font-weight: 700;
-
+                    font-family: E-bold;
                 }
                 p{
-                    color: $textColor;
+                    font-family: E-regular;
+                    font-size: 20px;
                     font-weight: 400;
+                    line-height: 180%;
                 }
                 button{
-                    color: $textColor;
+                    width: 184px;
+                    height: 40px;
                     background-color: #ffffff00;
+                    color: #fff;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    border: 1px solid #FFF;
+                    align-self: flex-end;
+                    @include flex(center,center,row );
+                    font-family: E-regular;
+                    font-size: 16px;
+                    font-weight: 500;
+
                 }
             }
+            .aboutContianer__leftPart{
+                width: 33vw;
+                @include flex(center,center,row);
+                gap: 24px;
+                .aboutContianer__leftPart--items{
+                    width: 184px;
+                    height: 136px;
+                    @include flex(space-evenly,center,column);
+                    font-family:E-regular;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+
         }
-        //I cant make aboutContianer helpp me.
         .cards-main-titel{
             font-family: E-bold;
             font-weight: 700;
