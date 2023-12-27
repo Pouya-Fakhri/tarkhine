@@ -58,6 +58,19 @@ main .hero {
   flex-direction: column;
   flex-wrap: wrap;
 }
+main .hero header nav.responsiveNavbar {
+  width: 100%;
+  display: none;
+}
+@media only screen and (max-width: 1160px) {
+  main .hero header nav.responsiveNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 main .hero header nav {
   display: flex;
   justify-content: space-around;
@@ -65,6 +78,11 @@ main .hero header nav {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 32px 108px;
+}
+@media only screen and (max-width: 1160px) {
+  main .hero header nav {
+    display: none;
+  }
 }
 main .hero header nav .center-part ul {
   display: flex;
@@ -188,6 +206,11 @@ main .hero header nav .left-part .icons--dropDown:hover .icons--dropDown__conten
 main .hero header .carousel {
   overflow: hidden;
 }
+@media only screen and (max-width: 976px) {
+  main .hero header .carousel {
+    display: none;
+  }
+}
 main .hero header .carousel .carousel-indicators {
   width: 154px;
   height: 35px;
@@ -244,10 +267,24 @@ main .hero .meno-contianer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-wrap: nowrap;
   width: 100%;
   margin-top: 150px;
   padding: 32px 108px;
+}
+@media only screen and (max-width: 1363px) {
+  main .hero .meno-contianer {
+    min-height: 850px;
+  }
+}
+@media only screen and (max-width: 790px) {
+  main .hero .meno-contianer {
+    min-height: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 main .hero .meno-contianer .meno {
   height: 160px;
@@ -296,7 +333,7 @@ main .content {
 }
 main .content .aboutContianer {
   width: 100vw;
-  height: 390px;
+  min-height: 390px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -307,6 +344,20 @@ main .content .aboutContianer {
   color: #fff;
   background-image: url(../image/about.png);
 }
+@media only screen and (max-width: 1097px) {
+  main .content .aboutContianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 790px) {
+  main .content .aboutContianer {
+    padding: 0;
+  }
+}
 main .content .aboutContianer .aboutContianer__rightPaet {
   width: 570px;
   height: 294px;
@@ -316,6 +367,15 @@ main .content .aboutContianer .aboutContianer__rightPaet {
   flex-direction: column;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 1097px) {
+  main .content .aboutContianer .aboutContianer__rightPaet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 main .content .aboutContianer .aboutContianer__rightPaet h2 {
   font-family: E-bold;
 }
@@ -324,6 +384,11 @@ main .content .aboutContianer .aboutContianer__rightPaet p {
   font-size: 20px;
   font-weight: 400;
   line-height: 180%;
+}
+@media only screen and (max-width: 1097px) {
+  main .content .aboutContianer .aboutContianer__rightPaet p {
+    text-align: center;
+  }
 }
 main .content .aboutContianer .aboutContianer__rightPaet button {
   width: 184px;
@@ -342,6 +407,11 @@ main .content .aboutContianer .aboutContianer__rightPaet button {
   font-family: E-regular;
   font-size: 16px;
   font-weight: 500;
+}
+@media only screen and (max-width: 1097px) {
+  main .content .aboutContianer .aboutContianer__rightPaet button {
+    align-self: center;
+  }
 }
 main .content .aboutContianer .aboutContianer__leftPart {
   width: 33vw;
@@ -377,6 +447,15 @@ main .content .cardCotianer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  main .content .cardCotianer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 main .content .cardCotianer .cardCotianer__cards {
   width: 288px;
@@ -426,7 +505,7 @@ main .content .cardCotianer .cardCotianer__cards button {
   display: none;
 }
 main footer {
-  height: 319px;
+  min-height: 319px;
   padding: 32px 7.5%;
   display: flex;
   justify-content: space-around;
@@ -447,6 +526,11 @@ main footer .righet-part {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 790px) {
+  main footer .righet-part {
+    display: none;
+  }
 }
 main footer .righet-part ul {
   width: 184px;

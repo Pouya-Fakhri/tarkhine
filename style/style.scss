@@ -36,7 +36,8 @@ $textColor:#fff;
     @include flex(flex-start,flex-start ,column );
     gap: 8px ;
     display: none;
-}
+} 
+
 main{
     direction: rtl;
     button{
@@ -48,9 +49,19 @@ main{
     .hero{
         @include flex(space-evenly,center,column );
         header{
+            nav.responsiveNavbar{
+                width: 100%;
+                display: none;
+                @media only screen and (max-width: 1160px){
+                    @include flex(center,center,row);
+                }
+            }
             nav{
                 @include flex(space-around,center,row);
                 padding: $contianer;
+                @media only screen and (max-width: 1160px){
+                    display: none;
+                }
                 .center-part{
                     ul{
                         @include flex(space-evenly,center,row);
@@ -115,6 +126,9 @@ main{
             }
             .carousel{
                 overflow: hidden;
+                @media only screen and (max-width: 976px){
+                    display: none;
+                }
                 .carousel-indicators{
                     width: 154px;
                     height: 35px;
@@ -122,6 +136,7 @@ main{
                     border-top-left-radius: 25px;
                     border-top-right-radius: 25px;
                     background-color: #fff;
+                    
                     button{
                         width: 10px;
                         height: 10px;
@@ -169,11 +184,18 @@ main{
             margin-top: 37px;
         }
         .meno-contianer{
-            @include flex(space-around,center ,row);
-            flex-wrap: nowrap;
+            @include flex(space-around,center,row);
             width: 100%;
+            // min-height: 850px;
             margin-top: 150px;
             padding: $contianer;
+            @media only screen and (max-width: 1363px){
+                min-height: 850px;
+            }
+            @media only screen and (max-width: 790px){
+                min-height: 1400px;
+                @include flex(space-between,center,column);
+            }
             .meno{
                 height: 160px;
                 width: 287px;
@@ -219,17 +241,29 @@ main{
         @include flex(center,center ,column );
         .aboutContianer{
             width: 100vw;
-            height: 390px;
+            min-height: 390px;
             @include flex(space-around,center ,row);
             margin-top: 80px;
             padding: 48px 7.5%;
-            
             color: #fff;
             background-image: url(../image/about.png);
+
+            @media only screen and (max-width: 1097px){
+                @include flex(center,center ,column );
+            }
+            @media only screen and (max-width: 790px){
+                padding: 0;
+            }
+
             .aboutContianer__rightPaet{
                 width: 570px;
                 height: 294px;
                 @include flex(space-evenly,flex-start,column );
+
+                @media only screen and (max-width: 1097px){
+                    @include flex(center,center ,column );
+                }
+
                 h2{
                     font-family: E-bold;
                 }
@@ -238,6 +272,9 @@ main{
                     font-size: 20px;
                     font-weight: 400;
                     line-height: 180%;
+                    @media only screen and (max-width: 1097px){
+                        text-align: center;
+                    }
                 }
                 button{
                     width: 184px;
@@ -252,7 +289,9 @@ main{
                     font-family: E-regular;
                     font-size: 16px;
                     font-weight: 500;
-                    
+                    @media only screen and (max-width: 1097px){
+                        align-self: center;
+                    }
                 }
             }
             .aboutContianer__leftPart{
@@ -279,6 +318,9 @@ main{
         .cardCotianer{
             width: 100%;
             @include flex(space-evenly,center ,row );
+            @media only screen and (max-width: 600px){
+                @include flex(space-evenly,center ,column); 
+            }
             .cardCotianer__cards{
                 width: 288px;
                 height: 344px;
@@ -322,7 +364,7 @@ main{
         }
     }
     footer{
-        height: 319px;
+        min-height: 319px;
         padding: 32px 7.5%;
         @include flex(space-around,center,row);
         flex-wrap: nowrap;
@@ -334,6 +376,9 @@ main{
             padding: -1%;
             color: $textColor;
             @include flex(space-around,center ,row);
+            @media only screen and (max-width: 790px){
+                display: none;
+            }
             ul{
                 width: 184px;
                 @include flex(flex-start,center,column);
